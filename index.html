@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Bootcamp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- SECTION Navigation Bar -->
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark text-white py-3 sticky-top" id="main-nav">
+        <div class="container">
+
+            <!-- ANCHOR Navbar Brand -->
+            <a href="#" class="navbar-brand fw-bold text-warning mx-md-auto">
+                <i class="fa-solid fa-fire fs-2 me-2"></i>
+                Random Camp
+            </a>
+            <button type="submit" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- ANCHOR Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="navbar-nav ms-auto text-end text-center-md">
+                    <li class="nav-item">
+                        <a href="#learn" class="nav-link">
+                            <i class="fa-solid fa-chalkboard d-md-none d-lg-inline me-1"></i>
+                            <i class="fa-solid fa-chalkboard fs-4 d-none d-md-inline d-lg-none d-sm-none"></i>
+                            <span class="d-lg-inline d-md-none ms-1 me-3">Learn</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#questions" class="nav-link">
+                            <i class="fa-solid fa-question d-md-none d-lg-inline me-1"></i>
+                            <i class="fa-solid fa-question fs-4 d-none d-md-inline d-lg-none d-sm-none mx-3"></i>
+                            <span class="d-lg-inline d-md-none ms-md-1 me-3">Questions</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#instructors" class="nav-link">
+                            <i class="fa-solid fa-person-chalkboard d-md-none d-lg-inline me-1"></i>
+                            <i class="fa-solid fa-person-chalkboard fs-4 d-none d-md-inline d-lg-none d-sm-none"></i>
+                            <span class="d-lg-inline d-md-none ms-md-1 me-3">Instructors</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- END !SECTION Navigation Bar -->
+
+    <!-- SECTION Showcase -->
+    <section class="bg-warning bg-opacity-75 text-dark p-5 text-center text-sm-start justify-content-between">
+        <div class="container d-sm-flex align-items-center">
+            <div>
+                <h1>
+                    Become a <span class="text-black text-opacity-50"> Random </span> Developer
+                </h1>
+                <p class="lead my-4 display-6 d-none d-lg-block">
+                    We Teach you Randomly everything. You Learn Everything Randomly. For Randomness, without other
+                    Randoms.
+                </p>
+                <p class="lead my-4 d-block d-lg-none">
+                    We Teach you Randomly everything. You Learn Everything Randomly. For Randomness, without other
+                    Randoms.
+                </p>
+                <p class="fw-bold">For Your Everything. <span class="text-black text-opacity-50 ms-2"> For Your Life.
+                    </span>
+                </p>
+                <div class="d-flex flex-wrap justify-content-center justify-content-sm-start mt-4">
+                    <button class="btn btn-dark btn-lg text-warning text-nowrap py-md-3 px-md-4" data-bs-toggle="modal"
+                        data-bs-target="#enrollModal"> Start Your Enrollment
+                    </button>
+                    <button class="btn btn-outline-dark btn-lg border border-2 border-dark py-md-3 px-md-4"> Learn More
+                    </button>
+                    <!-- LINK index.html:97 -->
+                </div>
+            </div>
+            <img src="./assets/showcase.svg" alt="showcase" class="img-fluid d-none d-md-block d-lg-none w-50 ms-4">
+            <img src="./assets/showcase.svg" alt="showcase" class="img-fluid d-none d-lg-block ms-4"
+                style="width: 30%;">
+        </div>
+
+    </section>
+    <!-- END !SECTION Showcase -->
+
+    <!-- ENROLL Modal -->
+    <div class="modal fade" id="enrollModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Enroll for the Upcoming BootCamp!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Fill out the below Form and we will get back to you</p>
+                    <form id="enrollForm" class="needs-validation d-flex flex-column align-items-center" novalidate>
+                        <p class="h6 align-self-start"> Your Name </p>
+                        <div class="input-group">
+                            <label for="first-name" class="input-group-text">
+                                First Name
+                            </label>
+                            <input class="form-control" type="text" name="first-name" id="first-name" required>
+                            <div class="invalid-feedback align-self-end">
+                                Your First Name is required
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="last-name" class="input-group-text">
+                                Last Name
+                            </label>
+                            <input class="form-control" type="text" name="last-name" id="last-name" required>
+                            <div class="invalid-feedback align-self-end">
+                                Your Last Name is required
+                            </div>
+                        </div>
+
+                        <p class="h6 align-self-start">Your Contact Information</p>
+                        <div class="input-group">
+                            <label for="phone-num" class="input-group-text">
+                                Phone Number
+                            </label>
+                            <input class="form-control" type="tel" name="phone-num" id="phone-num" required>
+                            <div class="invalid-feedback align-self-end">
+                                Please Enter a Valid Phone Number
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="email" class="input-group-text">
+                                E-mail
+                            </label>
+                            <input class="form-control" type="email" name="email" id="email" required>
+                            <div class="invalid-feedback align-self-end">
+                                Please Enter a Valid Email Address
+                            </div>
+                        </div>
+                        <div class="form-check align-self-start">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-warning align-self-end">Register</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer justify-content-center">
+                    For More Information Visit the <a href="https://google.com" class="link-danger">here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION More Showcase -->
+
+    <section class="bg-white text-dark p-5 text-center">
+        <div class="container d-sm-flex flex-column align-items-center">
+            <p class="lead"><i class="fa-solid fa-heart text-primary"></i> Trusted by Major Companies </p>
+            <div class="justify-content-center  row gx-md-5">
+                <img src="./assets/comp/facebook-logo-svgrepo-com.svg" alt="" style="width: 10em;" class="col-md">
+                <img src="./assets/comp/google-svgrepo-com.svg" alt="" style="width: 10em;" class="col-md">
+                <img src="./assets/comp/microsoft-logo-svgrepo-com.svg" alt="" style="width: 10em;" class="col-md">
+                <img src="./assets/comp/netflix-2-logo-svgrepo-com.svg" alt="" style="width: 10em;" class="col-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- END !SECTION More Showcase -->
+
+    <!-- SECTION Newsletter -->
+
+    <section class="bg-warning text-dark p-5">
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <p class="h3 mb-4 mb-md-0 text-center me-0 me-md-4 d-block d-md-none">
+                    Sign Up for Our Newsletter
+                </p>
+                <p class="h3 mb-4 mb-md-0 text-left text-nowrap me-4 d-none d-md-block ">
+                    Sign Up for Our Newsletter
+                </p>
+                <div class="input-group">
+                    <input type="text" name="input-group" id="" class="form-control" placeholder="Enter Your Email">
+                    <button class="btn btn-dark btn-lg text-warning">Sign Up!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END !SECTION Newsletter -->
+
+    <!-- SECTION Grids -->
+
+    <section class="bg-light text-warning p-5">
+        <div class="container">
+            <p class="h2 text-center mb-5">Choose According to your Team</p>
+            <div class="row justify-content-center gy-5">
+
+                <!-- ANCHOR Card 1 -->
+                <div class="col-md-6 col-lg-4 col-lg-4">
+                    <div class="card p-4 rounded-4 h-100 border border-white shadow">
+                        <div
+                            class="card-img-top bg-danger bg-opacity-50 w-25 w-md-25 h3 text-center p-3 rounded-3 mb-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-house text-danger"></i>
+                        </div>
+                        <div class="card-body p-0 text-black d-flex flex-column">
+                            <p class="h5 card-title fw-bold">Virtual</p>
+                            <p class="card-text pe-3">
+                                Fun Team Building Experience specifically designed for remote workers
+                            </p>
+                            <p class="link-danger d-flex align-items-center mt-auto fw-semibold">Learn More <i
+                                    class="fa-solid fa-arrow-right-long"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANCHOR Card 2 -->
+                <div class="col-md-6 col-lg-4 col-lg-4">
+                    <div class="card p-4 rounded-4 h-100 border border-white shadow">
+                        <div
+                            class="card-img-top bg-warning bg-opacity-50 w-25 h3 text-center p-3 rounded-3 mb-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-users text-warning"></i>
+                        </div>
+                        <div class="card-body p-0 text-black d-flex flex-column">
+                            <p class="h5 card-title fw-bold">Hybrid</p>
+                            <p class="card-text pe-3">
+                                In-Person Collborative Team Building building events linking-in person & employees
+                            </p>
+                            <p class="link-warning d-flex align-items-center mt-auto fw-semibold">Learn More <i
+                                    class="fa-solid fa-arrow-right-long"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANCHOR Card 3 -->
+                <div class="col-md-6 col-lg-4 col-lg-4">
+                    <div class="card p-4 rounded-4 h-100 border border-white shadow">
+                        <div
+                            class="card-img-top bg-success bg-opacity-50 w-25 h3 text-center p-3 rounded-3 mb-4 d-flex justify-content-center">
+                            <i class="fa-solid fa-user text-success"></i>
+                        </div>
+                        <div class="card-body p-0 text-black d-flex flex-column">
+                            <p class="h5 card-title fw-bold">In-Person</p>
+                            <p class="card-text pe-3">
+                                Foster stronger Teamwork with everyone gathered in a central location
+                            </p>
+                            <p class="link-success d-flex align-items-center mt-auto fw-semibold">Learn More <i
+                                    class="fa-solid fa-arrow-right-long"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END !SECTION Grids -->
+
+    <!-- SECTION Start Scrollpy -->
+
+    <div class="" data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-smooth-scroll="true">
+        <!-- SECTION Learn -->
+
+        <!-- ANCHOR SECTION Fundamentals -->
+        <section id="learn">
+            <section class="p-5 bg-dark">
+                <div class="container">
+                    <div class="row g-5 text-white">
+                        <div class="col-md d-flex">
+                            <div class="h1 m-auto"><i class=" fa-solid fa-globe section-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md p-5 my-0 my-md-auto">
+                            <h2>Learn The Fundamentals of Web</h2>
+                            <p class="lead mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil rem
+                                fugit
+                                repellat
+                                consequuntur maxime impedit illum libero, accusamus tenetur dolore doloremque aperiam ex
+                                qui
+                                maiores dolorem a placeat aut sint.
+                                Voluptate, quam! Delectus modi minus a molestias autem, dolor earum,
+                                fugit at!
+                            </p>
+                            <div class="btn-group mt-3">
+                                <button class="btn btn-warning">View Sections</button>
+                                <button class="btn btn-warning dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="dropdown-item">Section 1</a></li>
+                                    <li><a href="" class="dropdown-item">Section 2</a></li>
+                                    <li><a href="" class="dropdown-item">Section 3</a></li>
+                                    <li><a href="" class="dropdown-item">Section 4</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a href="" class="dropdown-item">Section Review</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANCHOR SECTION React -->
+            <section class="p-5 bg-light text-dark">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-md d-flex d-md-none">
+                            <div class="h1 m-auto"><i class="fa-brands fa-react section-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md p-5 my-0 my-md-auto">
+                            <h2>Learn The React</h2>
+                            <p class="lead mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil rem
+                                fugit
+                                repellat
+                                consequuntur maxime impedit illum libero, accusamus tenetur dolore doloremque aperiam ex
+                                qui
+                                maiores dolorem a placeat aut sint.
+                                Voluptate, quam! Delectus modi minus a molestias autem, dolor earum,
+                                fugit at!
+                            </p>
+                            <div class="btn-group mt-3">
+                                <button class="btn btn-warning bg-warning bg-opacity-75">View Sections</button>
+                                <button
+                                    class="btn btn-warning bg-warning bg-opacity-75 dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="dropdown-item">Section 1</a></li>
+                                    <li><a href="" class="dropdown-item">Section 2</a></li>
+                                    <li><a href="" class="dropdown-item">Section 3</a></li>
+                                    <li><a href="" class="dropdown-item">Section 4</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a href="" class="dropdown-item">Section Review</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md d-none d-md-flex">
+                            <div class="h1 m-auto"><i class="fa-brands fa-react section-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANCHOR SECTION Node -->
+            <section class="p-5 bg-dark text-light">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-md d-flex">
+                            <div class="h1 m-auto"><i class="fa-brands fa-node-js section-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md p-5 my-0 my-md-auto">
+                            <h2>Learn Node.js</h2>
+                            <p class="lead mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil rem
+                                fugit
+                                repellat
+                                consequuntur maxime impedit illum libero, accusamus tenetur dolore doloremque aperiam ex
+                                qui
+                                maiores dolorem a placeat aut sint.
+                                Voluptate, quam! Delectus modi minus a molestias autem, dolor earum,
+                                fugit at!
+                            </p>
+                            <div class="btn-group mt-3">
+                                <button class="btn btn-warning">View Sections</button>
+                                <button class="btn btn-warning dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="dropdown-item">Section 1</a></li>
+                                    <li><a href="" class="dropdown-item">Section 2</a></li>
+                                    <li><a href="" class="dropdown-item">Section 3</a></li>
+                                    <li><a href="" class="dropdown-item">Section 4</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a href="" class="dropdown-item">Section Review</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- END !SECTION Learn -->
+
+
+        <!-- SECTION  FAQ-->
+
+        <section class="p-5 bg-warning bg-opacity-75" id="questions">
+            <div class="container text-center text-dark d-flex flex-column">
+                <h3 class="mb-4">Frequently Asked Questions</h3>
+                <!-- ANCHOR Item 1 -->
+                <div class="accordion border border-0 rounded-5" id="faqAccordion">
+                    <div
+                        class="accordion-item border border-start-2 border-end-2 border-top-2 border-bottom-0 border-warning">
+                        <h2 class="accordion-header">
+                            <button type="button" class="accordion-button fw-semibold bg-warning bg-opacity-50"
+                                data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What are you doing?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <strong>Because We want to?</strong> I mean, why else? Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Repellendus fugiat, iure velit commodi assumenda
+                                incidunt
+                                doloremque totam. Quae, itaque dignissimos. Enim explicabo non blanditiis odit.
+                                Optio
+                                officiis quos illo magnam.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ANCHOR Item 2 -->
+
+                    <div
+                        class="accordion-item border border-start-2 border-end-2 border-top-0 border-bottom-0 border-warning">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-semibold bg-warning bg-opacity-50"
+                                data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Why are you Doing this?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <strong>Because We want to?</strong> I mean, why else? Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Repellendus fugiat, iure velit commodi assumenda
+                                incidunt
+                                doloremque totam. Quae, itaque dignissimos. Enim explicabo non blanditiis odit.
+                                Optio
+                                officiis quos illo magnam.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ANCHOR Item 3 -->
+
+                    <div
+                        class="accordion-item border border-top-0 border-bottom-2 border-start-2 border-end-2 border-warning">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-semibold bg-warning bg-opacity-50 "
+                                data-bs-toggle="collapse" data-bs-target="#faq3">
+                                How are you Doing this?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse " data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <strong>Because We want to?</strong> I mean, why else? Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Repellendus fugiat, iure velit commodi assumenda
+                                incidunt
+                                doloremque totam. Quae, itaque dignissimos. Enim explicabo non blanditiis odit.
+                                Optio
+                                officiis quos illo magnam.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <h3 class="my-4">Having More Questions?</h3>
+                    <p class="lead">We've over 25 years of experience in handling Randomness, for Random People.
+                        <br>
+                        You Can Contact Us For More Information!
+                    </p>
+                    <a href="mailto:qweqw@a.com" class="btn btn-warning btn-lg px-4 py-2 fs-5">Mail Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- END !SECTION  FAQ-->
+
+        <!-- SECTION Instructors -->
+
+        <section id="instructors" class="p-5">
+            <div class="container text-center">
+                <h2 class="text-warning">Meet your Instructors</h2>
+                <p class="lead">Our Instructors have more than 5+ Years of Industrial Experience</p>
+                <div class="row g-4">
+                    <!-- ANCHOR Instructor 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card p-4 h-100">
+                            <img src="https://loremflickr.com/g/240/240/cat-real" alt=""
+                                class="card-img-top rounded-circle w-50 m-auto">
+                            <div class="card-body row g-3">
+                                <div class="card-title fw-bolder">John Doe</div>
+                                <div class="card-text">Having 11 years of experience as Automation Engineer for
+                                    renowned
+                                    companies worldwide</div>
+
+                                <div class="mt-3 mx-auto row">
+                                    <a href="" class="text-primary h3 col-4"><i
+                                            class="fa fa-brands fa-linkedin"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-dev"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ANCHOR Instructor 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card p-4 h-100">
+                            <img src="https://loremflickr.com/g/240/240/dog,world" alt=""
+                                class="card-img-top rounded-circle w-50 m-auto">
+                            <div class="card-body row g-3">
+                                <div class="card-title fw-bolder">Jobra Don</div>
+                                <div class="card-text">Having 5 years of experience as Systems Engineer for renowned
+                                    companies worldwide</div>
+
+                                <div class="mt-3 mx-auto row">
+                                    <a href="" class="text-primary h3 col-4"><i
+                                            class="fa fa-brands fa-linkedin"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-dev"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ANCHOR Instructor 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card p-4 h-100">
+                            <img src="https://loremflickr.com/g/240/240/duck" alt=""
+                                class="card-img-top rounded-circle w-50 m-auto">
+                            <div class="card-body row g-3">
+                                <div class="card-title fw-bolder text-nowrap">Drake Duck</div>
+                                <div class="card-text">Having 7 years of experience as IBM Project Lead and 2 years
+                                    as a
+                                    Tech Consultant</div>
+
+                                <div class="mt-3 mx-auto row">
+                                    <a href="" class="text-primary h3 col-4"><i
+                                            class="fa fa-brands fa-linkedin"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-dev"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ANCHOR Instructor 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card p-4 h-100">
+                            <img src="https://loremflickr.com/g/240/240/seagul" alt=""
+                                class="card-img-top rounded-circle w-50 m-auto">
+                            <div class="card-body row g-3">
+                                <div class="card-title fw-bolder">Drake Duck</div>
+                                <div class="card-text">Having 7 years of experience as Co-Founder of some Random
+                                    Company
+                                    in a Random Place</div>
+
+                                <div class="mt-3 mx-auto row">
+                                    <a href="" class="text-primary h3 col-4"><i
+                                            class="fa fa-brands fa-linkedin"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-dev"></i></a>
+                                    <a href="" class="text-dark h3 col-4"><i class="fa fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- END !SECTION Instructors -->
+
+    </div>
+
+    <!-- END !SECTION Start Scrollpy -->
+
+    <!-- SECTION Contact Information -->
+
+    <section class="p-5 bg-dark bg-opacity-75">
+        <div class="container text-center  d-flex flex-column align-items-center">
+            <div class="h3">Our Contact Information</div>
+            <div class="row g-4">
+                <div class="col-md text-start">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bolder">Address</div>
+                                Bla Bla Bla Street, Bla Bla City - 000 000
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bolder">Contact Number</div>
+                                +123 132 312332 13
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bolder">Email</div>
+                                Bla1@dsf.fasd
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <iframe src="https://www.maps.google.com/" frameborder="0" class="rounded-2 w-100 h-100"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END !SECTION Contact Information -->
+
+    <!-- SECTION Footer -->
+
+    <footer class="p-3 bg-black text-center">
+        <div class="container">
+            <p class="lead text-white fs-6 m-0 fw-semibold">
+                All Rights were never reserved
+            </p>
+            <a href="#" class="position-fixed bottom-0 end-0 p-5">
+                <i class="fa-solid fa-circle-arrow-up text-black text-opacity-75 h1"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- END !SECTION Footer -->
+
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/4c28c4c07c.js" crossorigin="anonymous"></script>
+
+    <!-- Boostrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- Form Validation Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
