@@ -20,3 +20,72 @@
 .accordion-button:not(.collapsed) {
     box-shadow: none;
 }
+
+.carousel:first-child>.carousel-control-prev:hover {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.052), rgba(0, 0, 0, 0.152));
+}
+
+.carousel:first-child>.carousel-control-next:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.052), rgba(0, 0, 0, 0.152));
+}
+
+.carousel-indicators>button {
+    height: initial !important;
+    text-indent: 0 !important;
+    padding: initial !important;
+    background-color: transparent !important;
+    background-clip: border-box !important;
+}
+
+.img-wrapper::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.152), rgba(0, 0, 0, 0.152));
+    backdrop-filter: blur(2px);
+    z-index: 4;
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper>img {
+    z-index: 2;
+}
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-caption {
+    z-index: 6;
+}
+
+.carousel-indicators {
+    z-index: 5;
+}
+
+.carousel:last-child .carousel-item {
+    flex: 0 0 calc(100%/2);
+}
+
+/* Multi Item Carousel */
+
+@media screen and (min-width:576px) {
+    .carousel:last-child .carousel-inner {
+        display: flex;
+    }
+
+    .carousel:last-child .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/4);
+    }
+}
+
+footer a {
+    z-index: 10;
+}
